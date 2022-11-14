@@ -1,2 +1,6 @@
-# glovo-talk-2022-event-based-autoscaling
-Glovo &amp; Friends 2022: Event Based Autoscaling demo
+# Glovo &amp; Friends 2022: Event Based Autoscaling demo
+
+
+TODO: Set deployment of nginx
+install everything
+test

@@ -1,0 +1,18 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: glovo-talk-scaledobject
+  namespace: default
+spec:
+  maxReplicaCount: 6
+  minReplicaCount: 1
+  scaleTargetRef:
+    kind: Deployment
+    name: glovo-talk-deployment
+  triggers:
+  - type: aws-sqs-queue
+    metadata:
+      awsRegion: eu-west-1
+      queueLength: "2"
+      queueURL: http://localhost:4566/000000000000/sample-queue
+      identityOwner: operator
