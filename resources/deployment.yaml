@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: glovo-talk-deployment
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: glovo-talk-deployment
+  template:
+    metadata:
+      labels:
+        app: glovo-talk-deployment
+    spec:
+      containers:
+      - name: glovo-talk-deployment 
+        image: nginx:1.16.1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
