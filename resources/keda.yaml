@@ -26,7 +26,7 @@ metadata:
   namespace: default
 spec:
   maxReplicaCount: 6
-  minReplicaCount: 1
+  minReplicaCount: 0
   scaleTargetRef:
     kind: Deployment
     name: glovo-talk-deployment
